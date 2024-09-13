@@ -1,0 +1,161 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff6347;
+}
+
+/* Form container styling */
+.form-container, .user-list-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title, .user-list-title, .update-user-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input groups and form styling */
+.input-group, .form-group {
+  margin-bottom: 15px;
+}
+
+.input-group label, .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input, .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.input-group input:focus, .form-group input:focus {
+  border-color: #333;
+  outline: none;
+}
+
+/* Button styling */
+.button-save, .update-user-button, .button-confirm {
+  width: 100%;
+  background-color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px;
+  margin: auto 0;
+  transition: background-color 0.3s;
+}
+
+.button-save:hover, .update-user-button:hover, .button-confirm:hover {
+  background-color: #0056b3;
+}
+
+/* User list table styling */
+.user-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-list-thead, .user-list-header, .user-list-cell {
+  border: 1px solid #ddd;
+}
+
+.user-list-header, .user-list-cell {
+  padding: 12px;
+  text-align: left;
+}
+
+.user-list-header {
+  background-color: #f4f4f4;
+}
+
+.user-list-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Action buttons styling */
+.user-list-action-button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.user-list-action-button.edit-button {
+  background-color: #28a745;
+  text-decoration: none;
+}
+
+.user-list-action-button.edit-button:hover {
+  background-color: #218838;
+}
+
+.user-list-action-button.delete-button {
+  background-color: #dc3545;
+}
+
+.user-list-action-button.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}

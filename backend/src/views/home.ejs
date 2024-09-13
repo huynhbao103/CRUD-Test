@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User List</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/create">Create User</a></li>
+    </ul>
+  </nav>
+
+  <div class="user-list-container">
+    <h1 class="user-list-title">User List</h1>
+    <table class="user-list-table">
+      <thead class="user-list-thead">
+        <tr>
+          <th class="user-list-header">ID</th>
+          <th class="user-list-header">Email</th>
+          <th class="user-list-header">Name</th>
+          <th class="user-list-header">City</th>
+          <th class="user-list-header">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% listUsers.forEach(function(user) { %>
+          <tr class="user-list-row">
+            <td class="user-list-cell"><%= user._id %></td>
+            <td class="user-list-cell"><%= user.email %></td>
+            <td class="user-list-cell"><%= user.name %></td>
+            <td class="user-list-cell"><%= user.city %></td>
+            <td class="user-list-cell">
+              <a href="/update/<%= user._id %>" class="user-list-action-button edit-button">Edit</a>
+              <form action="/delete-user/<%= user._id %>" method="POST" style="display:inline;">
+                <button type="submit" class="user-list-action-button delete-button">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
